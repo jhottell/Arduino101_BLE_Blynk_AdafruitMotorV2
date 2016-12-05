@@ -18,4 +18,4 @@ From your phone disconnect or delete all BLE connections, they can interfere wit
 In the Blynk app click on the bluetooth connection block and connect to the Arduino.
 Put the Blynk app into run mode and mash the buttons!
 
-Full tutorial coming soon
+Full tutorial coming soon...
