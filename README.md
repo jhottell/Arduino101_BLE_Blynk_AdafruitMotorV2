@@ -2,7 +2,7 @@
 Code for a BLE rover using Blynk as the remote and Arduino 101 with Adafruit motor shield.
 
 Instructions:
-As sharing Blynk apps is in beta right now for android and I am in the iPhone camp I can't share the Blynk app right now. I will add videos and complete build instructions soon to http://hackster.io and http://electronhacks.com .
+As sharing Blynk apps is in beta right now for android and I am in the iPhone camp I can't share the Blynk app right now. 
 
 Steps.
 Install the Blynk App on your phone.
@@ -18,4 +18,7 @@ From your phone disconnect or delete all BLE connections, they can interfere wit
 In the Blynk app click on the bluetooth connection block and connect to the Arduino.
 Put the Blynk app into run mode and mash the buttons!
 
-Full tutorial coming soon...
+Full tutorial can be found here along with videos.
+
+http://www.electronhacks.com/2016/12/intel-arduino-101-ble-blynk-tank/
+https://www.hackster.io/fileark/intel-arduino-101-ble-blynk-tank-57812d
