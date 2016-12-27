@@ -25,7 +25,8 @@ Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 // Select which 'port' M1, M2, M3 or M4.
 Adafruit_DCMotor *motor1 = AFMS.getMotor(1);
 Adafruit_DCMotor *motor2 = AFMS.getMotor(2);
-
+Adafruit_DCMotor *motor3 = AFMS.getMotor(3);
+Adafruit_DCMotor *motor4 = AFMS.getMotor(4);
 
 //######### SETUP ######################################
 void setup() {
@@ -50,7 +51,8 @@ void setup() {
   // Set the speed to start, from 0 (off) to 255 (max speed)
   motor1->setSpeed(255);
   motor2->setSpeed(255);
-  
+  motor3->setSpeed(255);
+  motor4->setSpeed(255);  
 
 }
 
@@ -75,6 +77,8 @@ BLYNK_WRITE(V0)
   Serial.println(pinValue);
   motor1->setSpeed(pinValue);
   motor2->setSpeed(pinValue); 
+  motor3->setSpeed(pinValue);
+  motor4->setSpeed(pinValue);   
 }
 
 // Motor 1 Forward
@@ -85,9 +89,11 @@ BLYNK_WRITE(V1)
   Serial.println(pinValue);
   if(pinValue == 1) {
     motor1->run(FORWARD);
+    motor3->run(FORWARD);
   }
   if(pinValue == 0) {
     motor1->run(RELEASE);
+    motor3->run(RELEASE);    
   }
 }
 
@@ -100,9 +106,11 @@ BLYNK_WRITE(V2)
   Serial.println(pinValue);
   if(pinValue == 1) {
     motor2->run(FORWARD);
+    motor4->run(FORWARD);   
   }
   if(pinValue == 0) {
     motor2->run(RELEASE);
+    motor4->run(RELEASE);
   }
 }
 
@@ -114,9 +122,11 @@ BLYNK_WRITE(V3)
   Serial.println(pinValue);
   if(pinValue == 1) {
     motor1->run(BACKWARD);
+    motor3->run(BACKWARD);    
   }
   if(pinValue == 0) {
     motor1->run(RELEASE);
+    motor3->run(RELEASE);    
   }
 }
 
@@ -128,8 +138,10 @@ BLYNK_WRITE(V4)
   Serial.println(pinValue);
   if(pinValue == 1) {
     motor2->run(BACKWARD);
+    motor4->run(BACKWARD);
   }
   if(pinValue == 0) {
     motor2->run(RELEASE);
+    motor4->run(RELEASE);    
   }
 }
